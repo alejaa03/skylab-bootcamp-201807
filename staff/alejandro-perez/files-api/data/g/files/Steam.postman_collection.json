@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "f7ae3d08-79a8-4529-9f8d-466b1c28e08f",
+		"name": "Steam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "b26bc830-613e-4bac-970f-85d6a4437fb5",
+			"name": "Bans acc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamids=76561198043132949",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUser",
+						"GetPlayerBans",
+						"v1",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamids",
+							"value": "76561198043132949"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "f33e8fec-746c-4f83-b559-2908d3b318f4",
+			"name": "Available achvs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=31828CE44AAF3623DFA7D1D611FFAE6E&appid=271590",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUserStats",
+						"GetSchemaForGame",
+						"v2",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "appid",
+							"value": "271590"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "2c065c0e-48a9-4f0f-8f08-db8c02646efe",
+			"name": "Is Playing sharde game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/IPlayerService/IsPlayingSharedGame/v0001/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198043132949&appid_playing=374320&format=json",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"IPlayerService",
+						"IsPlayingSharedGame",
+						"v0001",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198043132949"
+						},
+						{
+							"key": "appid_playing",
+							"value": "374320"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "IsPlayingSharedGame returns the original owner's SteamID if a borrowing account is currently playing this game. If the game is not borrowed or the borrower currently doesn't play this game, the result is always 0"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "45e69fcb-9d14-4077-b7d9-f038fb2ad233",
+			"name": "Recently played",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198141307799&format=json",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"IPlayerService",
+						"GetRecentlyPlayedGames",
+						"v0001",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198141307799"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "GetRecentlyPlayedGames returns a list of games a player has played in the last two weeks, if the profile is publicly visible. Private, friends-only, and other privacy settings are not supported unless you are asking for your own personal details (ie the WebAPI key you are using is linked to the steamid you are requesting)."
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "547363aa-248f-406c-bf14-3e05e4bd425d",
+			"name": "Owned Games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198141307799&format=json",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"IPlayerService",
+						"GetOwnedGames",
+						"v0001",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198141307799"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				},
+				"description": "GetOwnedGames returns a list of games a player owns along with some playtime information, if the profile is publicly visible. Private, friends-only, and other privacy settings are not supported unless you are asking for your own personal details (ie the WebAPI key you are using is linked to the steamid you are requesting)"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "31c00a95-c909-4ff8-8f89-f08962fbdbe5",
+			"name": "Recently played games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198141307799&format=json",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"IPlayerService",
+						"GetRecentlyPlayedGames",
+						"v0001",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198141307799"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "bb61c361-46dd-4a0e-8e69-2571510d4c25",
+			"name": "User stats for game ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=374320&key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198141307799",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUserStats",
+						"GetUserStatsForGame",
+						"v0002",
+						""
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "374320"
+						},
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198141307799"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "f5b449e1-cbe1-4da9-bc7d-8a430b454417",
+			"name": "Get Player achievement per game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=374320&key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198141307799",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUserStats",
+						"GetPlayerAchievements",
+						"v0001",
+						""
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "374320"
+						},
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198141307799"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "697dec94-28f9-4338-9043-efc1265ee497",
+			"name": "get friends",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamid=76561198141307799&relationship=friend",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUser",
+						"GetFriendList",
+						"v0001",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamid",
+							"value": "76561198141307799"
+						},
+						{
+							"key": "relationship",
+							"value": "friend"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "99c4429d-ad93-4b77-ad5d-31a0639b67d1",
+			"name": "GetPlayerSummaries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=31828CE44AAF3623DFA7D1D611FFAE6E&steamids=76561198141307799",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUser",
+						"GetPlayerSummaries",
+						"v0002",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "31828CE44AAF3623DFA7D1D611FFAE6E"
+						},
+						{
+							"key": "steamids",
+							"value": "76561198141307799"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "0c983eb4-833d-4f67-905d-f1dca423635b",
+			"name": "GetGlobalAchievementPercentagesForApp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=374320&format=json",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamUserStats",
+						"GetGlobalAchievementPercentagesForApp",
+						"v0002",
+						""
+					],
+					"query": [
+						{
+							"key": "gameid",
+							"value": "374320"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "918b0a5c-6a4b-4934-b416-8157101fc1ac",
+			"name": "GetNewsForApp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=374320&count=10&maxlength=30&format=json",
+					"protocol": "http",
+					"host": [
+						"api",
+						"steampowered",
+						"com"
+					],
+					"path": [
+						"ISteamNews",
+						"GetNewsForApp",
+						"v0002",
+						""
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "374320"
+						},
+						{
+							"key": "count",
+							"value": "10"
+						},
+						{
+							"key": "maxlength",
+							"value": "30"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
