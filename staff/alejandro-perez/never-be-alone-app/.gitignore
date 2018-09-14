@@ -1,0 +1,7 @@
+.eslintrc.json
+.vscode/
+client/node_modules/
+client/mikel.json
+client/app/.env
+server/api/node_modules/
+server/api/.env
